@@ -13,11 +13,17 @@
   background-position: center center;
 }
 .lock-screen.hide-password .lock-screen-datetime {
+  transition-delay: 0s;
   top: -20%;
   opacity: 0;
 }
+.lock-screen:not(.hide-password) .lock-screen-datetime {
+  transition-delay: 0.7s;
+}
 .lock-screen:not(.hide-password) .lock-screen-password {
   opacity: 0;
+  pointer-events: none;
+  transition-delay: 0s;
 }
 .lock-screen > * {
   position: absolute;
@@ -88,7 +94,16 @@
   opacity: 1;
   /* Firefox */
 }
-.lock-screen .lock-screen-password .password-container button {
+.lock-screen .lock-screen-password .password-container button.eye {
+  background-color: transparent;
+  position: absolute;
+  top: 1px;
+  right: 20px;
+  border: none;
+  height: 100%;
+  width: 30px;
+}
+.lock-screen .lock-screen-password .password-container button.arrow {
   background-color: transparent;
   position: absolute;
   top: 1px;

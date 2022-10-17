@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 interface LockScreenProps {
     enabled: boolean;
     status?: 'idle' | 'loading' | 'failed';
+    openWindows: (str : string) => void;
 }
 
 function LockScreen(props: LockScreenProps) {
@@ -29,7 +30,7 @@ function LockScreen(props: LockScreenProps) {
     return (<div className={'lock-screen ' + (hiddenPassword ? 'hide-password' : '')}>
         <div className='background' style={{ backgroundImage: `url(${lockScreenImg})` }}></div>
         <DateTimePage handleSuccess={showPassword} />
-        <LockScreenPassword handleHide={hidePassword} handleSuccess={hidePassword} />
+        <LockScreenPassword handleHide={hidePassword} handleSuccess={props.openWindows} />
     </div>);
 }
 

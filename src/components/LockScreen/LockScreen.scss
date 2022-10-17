@@ -16,14 +16,20 @@
 
     &.hide-password {
         .lock-screen-datetime {
+            transition-delay: 0s;
             top: -20%;
             opacity: 0;
         }
     }
 
     &:not(.hide-password) {
+        .lock-screen-datetime {
+            transition-delay: 0.7s;
+        }
         .lock-screen-password {
             opacity: 0;
+            pointer-events: none;
+            transition-delay: 0s;
         }
     }
 
@@ -95,7 +101,16 @@
                 }
             }
 
-            button {
+            button.eye {
+                background-color: transparent;
+                position: absolute;
+                top: 1px;
+                right: 20px;
+                border: none;
+                height: 100%;
+                width: 30px;
+            }
+            button.arrow {
                 background-color: transparent;
                 position: absolute;
                 top: 1px;

@@ -1,24 +1,39 @@
 import imgProfile from '../../assets/windows/profile/davide-valsecchi.jpeg'
-import { ArrowForwardOutline } from 'react-ionicons'
-import { useEffect, useState } from 'react';
+import { ArrowForwardOutline, Eye } from 'react-ionicons'
+import { FormEvent, FormEventHandler, useEffect, useState } from 'react';
 
 interface LockScreenPasswordProps {
-    handleSuccess: React.MouseEventHandler<HTMLButtonElement>;
+    handleSuccess: (str : string) => void;
     handleHide: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 }
 
 function LockScreenPassword(props: LockScreenPasswordProps) {
+    
+    var [passwordVal, setPasswordVal] = useState<string>('');
+    const [inputType, setInputType] = useState<string>();
 
     const passwordKeyDownHandler = (e: any) => {
         if (e.code === 'Enter'){
-            props.handleSuccess(e)
+            props.handleSuccess(passwordVal)
         }
     }
 
-    const [inputType, setInputType] = useState<string>('');
+    const handleSuccess = () => {
+        props.handleSuccess(passwordVal)
+    }
+
+    const onPasswordInput = (event: FormEvent<HTMLInputElement>) => {
+        setPasswordVal(event.currentTarget.value)
+    }
+    const showPassword = () => {
+        setInputType('text')
+    }
+    const hidePassword = () => {
+        setInputType('password')
+    }
 
     useEffect(() => {
-        setInputType('password');
+        hidePassword()
     }, [])
 
     return (<div className="lock-screen-password">
@@ -28,9 +43,10 @@ function LockScreenPassword(props: LockScreenPasswordProps) {
         <h3>Davide Valsecchi</h3>
         <div className='password-container'>
             <div className='input-wrapper'>
-                <input type={inputType} onKeyDown={passwordKeyDownHandler} placeholder="Password" autoFocus />
+                <input type={inputType} onInput={onPasswordInput} value={passwordVal} onKeyDown={passwordKeyDownHandler} placeholder="Password" autoFocus />
             </div>
-            <button onClick={props.handleSuccess}><ArrowForwardOutline color='white'></ArrowForwardOutline></button>
+            <button className='eye' onMouseDown={showPassword} onMouseUp={hidePassword}><Eye color='white'></Eye></button>
+            <button className='arrow' onClick={handleSuccess}><ArrowForwardOutline color='white'></ArrowForwardOutline></button>
         </div>
     </div>);
 }
