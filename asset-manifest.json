@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/react-windows11/static/css/main.9f472dfa.css",
+    "main.js": "/react-windows11/static/js/main.1cbee542.js",
+    "static/js/787.c5e68a36.chunk.js": "/react-windows11/static/js/787.c5e68a36.chunk.js",
+    "static/media/img0.jpg": "/react-windows11/static/media/img0.54cedb514cfb86a2a95b.jpg",
+    "static/media/lock-screen.jpg": "/react-windows11/static/media/lock-screen.05720883a51b10cf9e5d.jpg",
+    "index.html": "/react-windows11/index.html",
+    "main.9f472dfa.css.map": "/react-windows11/static/css/main.9f472dfa.css.map",
+    "main.1cbee542.js.map": "/react-windows11/static/js/main.1cbee542.js.map",
+    "787.c5e68a36.chunk.js.map": "/react-windows11/static/js/787.c5e68a36.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9f472dfa.css",
+    "static/js/main.1cbee542.js"
+  ]
+}
