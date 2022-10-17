@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/react-windows11/static/css/main.58f36a9d.css",
-    "main.js": "/react-windows11/static/js/main.d7d6528f.js",
+    "main.css": "/react-windows11/static/css/main.4e08306e.css",
+    "main.js": "/react-windows11/static/js/main.2ec8f168.js",
     "static/js/787.c5e68a36.chunk.js": "/react-windows11/static/js/787.c5e68a36.chunk.js",
     "static/media/img0.jpg": "/react-windows11/static/media/img0.54cedb514cfb86a2a95b.jpg",
     "static/media/lock-screen.jpg": "/react-windows11/static/media/lock-screen.05720883a51b10cf9e5d.jpg",
     "index.html": "/react-windows11/index.html",
-    "main.58f36a9d.css.map": "/react-windows11/static/css/main.58f36a9d.css.map",
-    "main.d7d6528f.js.map": "/react-windows11/static/js/main.d7d6528f.js.map",
+    "main.4e08306e.css.map": "/react-windows11/static/css/main.4e08306e.css.map",
+    "main.2ec8f168.js.map": "/react-windows11/static/js/main.2ec8f168.js.map",
     "787.c5e68a36.chunk.js.map": "/react-windows11/static/js/787.c5e68a36.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.58f36a9d.css",
-    "static/js/main.d7d6528f.js"
+    "static/css/main.4e08306e.css",
+    "static/js/main.2ec8f168.js"
   ]
 }
